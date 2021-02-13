@@ -43,7 +43,7 @@ add_library(${LIB_NEATOGEN}
     ${GRAPHVIZ_SRC_DIR}/lib/neatogen/quad_prog_vpsc.c
 )
 
-target_link_libraries(${LIB_NEATOGEN}
+target_link_libraries(${LIB_NEATOGEN} PRIVATE
     ${LIB_COMMON}
     ${LIB_PATHPLAN}
     ${LIB_PACK}

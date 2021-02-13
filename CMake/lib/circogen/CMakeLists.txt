@@ -12,7 +12,7 @@ add_library(${LIB_CIRCOGEN}
     #${GRAPHVIZ_SRC_DIR}/lib/circogen/stack.c
 )
 
-target_link_libraries(${LIB_CIRCOGEN} 
+target_link_libraries(${LIB_CIRCOGEN}  PRIVATE
     ${LIB_COMMON}
     ${LIB_GRAPH}
     ${LIB_NEATOGEN}

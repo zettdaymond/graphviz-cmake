@@ -10,7 +10,7 @@ add_library(${LIB_PLUGIN_CORE}
     ${GRAPHVIZ_SRC_DIR}/plugin/core/gvrender_core_vml.c
 )
 
-target_link_libraries(${LIB_PLUGIN_CORE}
+target_link_libraries(${LIB_PLUGIN_CORE} PRIVATE
     ${LIB_COMMON}
     ${LIB_GRAPH}
     ${LIB_XDOT}

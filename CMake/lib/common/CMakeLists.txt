@@ -24,7 +24,7 @@ add_library(${LIB_COMMON}
     ${GRAPHVIZ_SRC_DIR}/lib/common/utils.c
 )
 
-target_link_libraries(${LIB_COMMON}
+target_link_libraries(${LIB_COMMON} PRIVATE
     ${LIB_GVC}
     ${LIB_GRAPH}
     ${LIB_PATHPLAN}

@@ -21,7 +21,7 @@ add_library(${LIB_SFDPGEN}
     ${GRAPHVIZ_SRC_DIR}/lib/sfdpgen/uniform_stress.c
 )
 
-target_link_libraries (${LIB_SFDPGEN}
+target_link_libraries (${LIB_SFDPGEN} PRIVATE
     ${LIB_COMMON}
     ${LIB_GRAPH}
     ${LIB_NEATOGEN}

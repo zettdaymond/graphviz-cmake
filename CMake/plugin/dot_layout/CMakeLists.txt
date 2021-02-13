@@ -3,6 +3,6 @@ add_library(${LIB_PLUGIN_DOT_LAYOUT}
     ${GRAPHVIZ_SRC_DIR}/plugin/dot_layout/gvplugin_dot_layout.c
 )
 
-target_link_libraries (${LIB_PLUGIN_DOT_LAYOUT}
+target_link_libraries (${LIB_PLUGIN_DOT_LAYOUT} PRIVATE
     ${LIB_DOTGEN}
 )

@@ -4,7 +4,7 @@ add_library(${LIB_PATCHWORK}
     ${GRAPHVIZ_SRC_DIR}/lib/patchwork/patchworkinit.c
 )
 
-target_link_libraries (${LIB_PATCHWORK}
+target_link_libraries (${LIB_PATCHWORK} PRIVATE
     ${LIB_COMMON}
     ${LIB_XDOT}
 )

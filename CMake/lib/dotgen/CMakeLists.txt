@@ -17,7 +17,7 @@ add_library(${LIB_DOTGEN}
     ${GRAPHVIZ_SRC_DIR}/lib/dotgen/sameport.c
 )
 
-target_link_libraries(${LIB_DOTGEN} 
+target_link_libraries(${LIB_DOTGEN}  PRIVATE
     ${LIB_COMMON}
     ${LIB_GRAPH}
     ${LIB_XDOT}

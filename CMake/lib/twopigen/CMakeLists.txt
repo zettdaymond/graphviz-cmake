@@ -3,7 +3,7 @@ add_library(${LIB_TWOPIGEN}
     ${GRAPHVIZ_SRC_DIR}/lib/twopigen/twopiinit.c
 )
 
-target_link_libraries(${LIB_TWOPIGEN}
+target_link_libraries(${LIB_TWOPIGEN} PRIVATE
     ${LIB_COMMON}
     ${LIB_PACK}
     ${LIB_NEATOGEN}

@@ -25,10 +25,10 @@
 #define _END_EXTERNS_
 #endif
 
-#ifdef WIN32
-#define __EXPORT__
-#define __IMPORT__
-#endif
+//#ifdef WIN32
+//#define __EXPORT__
+//#define __IMPORT__
+//#endif
 
 
 #if !_DLL_BLD && _dll_import

@@ -32,8 +32,8 @@
 static char* colorscheme;
 
 #ifdef WIN32
-extern int strcasecmp(const char *s1, const char *s2);
-extern int strncasecmp(const char *s1, const char *s2, unsigned int n);
+//extern int strcasecmp(const char *s1, const char *s2);
+//extern int strncasecmp(const char *s1, const char *s2, unsigned int n);
 #endif
 
 

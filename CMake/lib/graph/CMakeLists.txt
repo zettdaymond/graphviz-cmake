@@ -11,6 +11,6 @@ add_library(${LIB_GRAPH}
     ${GRAPHVIZ_SRC_DIR}/lib/graph/trie.c
 )
 
-target_link_libraries(${LIB_GRAPH}
+target_link_libraries(${LIB_GRAPH} PRIVATE
     ${LIB_CDT}
 )

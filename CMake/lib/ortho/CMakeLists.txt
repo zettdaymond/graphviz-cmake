@@ -26,5 +26,5 @@ add_library(${LIB_ORTHO}
     ${GRAPHVIZ_SRC_DIR}/lib/ortho/trapezoid.c
 )
 
-target_link_libraries(${LIB_ORTHO}
+target_link_libraries(${LIB_ORTHO} PRIVATE
     ${LIB_COMMON})

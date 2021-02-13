@@ -34,7 +34,8 @@
 /* #define ENABLE_LTDL 1 */
 
 /* Define for DLLs on Windows. */
-#define GVDLL 1
+#define GVDLL 0
+#undef GVDLL
 
 /* Filename for plugin configuration file. */
 #define GVPLUGIN_CONFIG_FILE "config6"

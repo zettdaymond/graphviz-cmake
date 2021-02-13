@@ -3,7 +3,7 @@ add_library(${LIB_PLUGIN_NEATO_LAYOUT}
     ${GRAPHVIZ_SRC_DIR}/plugin/neato_layout/gvplugin_neato_layout.c
 )
 
-target_link_libraries(${LIB_PLUGIN_NEATO_LAYOUT}
+target_link_libraries(${LIB_PLUGIN_NEATO_LAYOUT} PRIVATE
     ${LIB_NEATOGEN}
     ${LIB_PATCHWORK}
     ${LIB_TWOPIGEN}

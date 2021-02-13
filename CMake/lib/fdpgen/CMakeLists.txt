@@ -9,7 +9,7 @@ add_library(${LIB_FDPGEN}
     ${GRAPHVIZ_SRC_DIR}/lib/fdpgen/xlayout.c
 )
 
-target_link_libraries(${LIB_FDPGEN}
+target_link_libraries(${LIB_FDPGEN} PRIVATE
     ${LIB_COMMON}
     ${LIB_GRAPH}
     ${LIB_NEATOGEN}

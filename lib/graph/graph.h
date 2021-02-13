@@ -123,20 +123,20 @@ extern "C" {
     };
 
 #if _PACKAGE_ast
-     _BEGIN_EXTERNS_		/* public data */
-#if _BLD_graph && defined(__EXPORT__)
-#define extern  __EXPORT__
-#endif
-#if !_BLD_graph && defined(__IMPORT__) && 0
-#define extern  __IMPORT__
-#endif
+//     _BEGIN_EXTERNS_		/* public data */
+//#if _BLD_graph && defined(__EXPORT__)
+//#define extern  __EXPORT__
+//#endif
+//#if !_BLD_graph && defined(__IMPORT__) && 0
+//#define extern  __IMPORT__
+//#endif
 #endif
 /*visual studio*/
 #ifdef WIN32_DLL
 #ifndef GRAPH_EXPORTS
-#define extern __declspec(dllimport)
+//#define extern __declspec(dllimport)
 #else
-#define extern __declspec(dllexport)
+//#define extern __declspec(dllexport)
 #endif
 
 #endif
@@ -161,7 +161,7 @@ extern "C" {
     extern Agraph_t *agread_usergets(FILE *, gets_f);
     extern void agreadline(int);
     extern void agsetfile(char *);
-    extern Agraph_t *agmemread(char *);
+    Agraph_t *agmemread(char *);
     extern void agsetiodisc(
         char * (*myfgets) (char *s, int size, FILE *stream),
 	size_t (*myfwrite) (const void *ptr, size_t size, size_t nmemb, FILE *stream),

@@ -5,6 +5,6 @@ add_library(${LIB_SPARSE}
     ${GRAPHVIZ_SRC_DIR}/lib/sparse/SparseMatrix.c
 )
 
-target_link_libraries(${LIB_SPARSE}
+target_link_libraries(${LIB_SPARSE} PRIVATE
     ${LIB_COMMON}
 )
