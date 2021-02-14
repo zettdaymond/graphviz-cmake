@@ -160,37 +160,39 @@ target_include_directories(${LIB_PLUGIN_NEATO_LAYOUT} PUBLIC ${GRAPHVIZ_SRC_DIR}
 
 target_include_directories(${LIB_GRAPHVIZ}            PUBLIC ${GRAPHVIZ_SRC_DIR} ${GRAPHVIZ_CMAKE_DIR})
 
-install( TARGETS
-    ${LIB_CDT}
-    ${LIB_CIRCOGEN}
-    ${LIB_COMMON}
-    ${LIB_DOTGEN}
-    ${LIB_FDPGEN}
-    ${LIB_GRAPH}
-    ${LIB_GVC}
-    ${LIB_NEATOGEN}
-    ${LIB_ORTHO}
-    ${LIB_OSAGE}
-    ${LIB_PACK}
-    ${LIB_PATCHWORK}
-    ${LIB_PATHPLAN}
-    ${LIB_SFDPGEN}
-    ${LIB_SPARSE}
-    ${LIB_TWOPIGEN}
-    ${LIB_XDOT}
-    ${LIB_VPSC}
+if(GRAPHVIZ_INSTALL)
+    install( TARGETS
+        ${LIB_CDT}
+        ${LIB_CIRCOGEN}
+        ${LIB_COMMON}
+        ${LIB_DOTGEN}
+        ${LIB_FDPGEN}
+        ${LIB_GRAPH}
+        ${LIB_GVC}
+        ${LIB_NEATOGEN}
+        ${LIB_ORTHO}
+        ${LIB_OSAGE}
+        ${LIB_PACK}
+        ${LIB_PATCHWORK}
+        ${LIB_PATHPLAN}
+        ${LIB_SFDPGEN}
+        ${LIB_SPARSE}
+        ${LIB_TWOPIGEN}
+        ${LIB_XDOT}
+        ${LIB_VPSC}
 
-    ${LIB_PLUGIN_CORE}
-    ${LIB_PLUGIN_DOT_LAYOUT}
-    ${LIB_PLUGIN_NEATO_LAYOUT}
+        ${LIB_PLUGIN_CORE}
+        ${LIB_PLUGIN_DOT_LAYOUT}
+        ${LIB_PLUGIN_NEATO_LAYOUT}
 
-    ${LIB_GRAPHVIZ}
+        ${LIB_GRAPHVIZ}
 
-    EXPORT ${PROJECT_NAME}_Targets
-    ARCHIVE DESTINATION lib
-)
+        EXPORT ${PROJECT_NAME}_Targets
+        ARCHIVE DESTINATION lib
+    )
 
-file(GLOB_RECURSE LIBS_HDRS ${GRAPHVIZ_SRC_DIR}/lib/*.h)
-file(GLOB_RECURSE PLUGIN_HDRS ${GRAPHVIZ_SRC_DIR}/plugin/*.h)
+    file(GLOB_RECURSE LIBS_HDRS ${GRAPHVIZ_SRC_DIR}/lib/*.h)
+    file(GLOB_RECURSE PLUGIN_HDRS ${GRAPHVIZ_SRC_DIR}/plugin/*.h)
 
-install(FILES ${LIBS_HDRS} ${PLUGIN_HDRS} DESTINATION include/graphviz_static)
+    install(FILES ${LIBS_HDRS} ${PLUGIN_HDRS} DESTINATION include/graphviz_static)
+endif()

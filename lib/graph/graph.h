@@ -161,7 +161,7 @@ extern "C" {
     extern Agraph_t *agread_usergets(FILE *, gets_f);
     extern void agreadline(int);
     extern void agsetfile(char *);
-    Agraph_t *agmemread(char *);
+    extern Agraph_t *agmemread(char *);
     extern void agsetiodisc(
         char * (*myfgets) (char *s, int size, FILE *stream),
 	size_t (*myfwrite) (const void *ptr, size_t size, size_t nmemb, FILE *stream),

@@ -289,7 +289,8 @@
 /* #undef HAVE_LIBXPMFORLEFTY */
 
 /* Define if you have the Z library */
-#define HAVE_LIBZ 1
+#define HAVE_LIBZ 0
+#undef HAVE_LIBZ
 
 /* Define to 1 if you have the <limits.h> header file. */
 #define HAVE_LIMITS_H 1

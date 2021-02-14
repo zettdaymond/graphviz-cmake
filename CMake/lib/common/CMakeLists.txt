@@ -29,5 +29,4 @@ target_link_libraries(${LIB_COMMON} PRIVATE
     ${LIB_GRAPH}
     ${LIB_PATHPLAN}
     ${LIB_XDOT}
-    z
 )
